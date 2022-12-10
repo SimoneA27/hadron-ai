@@ -49,7 +49,7 @@ public class HeuristicImpl implements Heuristic {
                 consuma = -20;
         }
 
-        System.err.println("co: "+co+" cb: "+cb+" cs: "+cs+" csa: "+csa+" css: "+css+" cass: "+cass);
+        System.out.println("co: "+co+" cb: "+cb+" cs: "+cs+" csa: "+csa+" css: "+css+" cass: "+cass);
 
         return pesi[0] * (9 * 9 - co-cb-css-cs-csa-cass) + pesi[1] * (cb+co) + pesi[2] * dispari * (css + cass)+pesi[3]*csa +pesi[4] * cs * consuma;
 
@@ -83,9 +83,6 @@ public class HeuristicImpl implements Heuristic {
                     return false;
                 ret+=val;
 
-
-
-
         }
         for (int h = j - 1; h < j + 2 ; h += 2) {
             if(h > -1 && h < 9)
@@ -93,7 +90,6 @@ public class HeuristicImpl implements Heuristic {
                 if(val==0)
                     return false;
                 ret+=val;
-
         }
         return ret == 0 ;
     }
@@ -106,7 +102,6 @@ public class HeuristicImpl implements Heuristic {
                     return false;
             }
         return true;
-
     }
 
     private static boolean cellaBloccata( Board b , int i , int j ) {
